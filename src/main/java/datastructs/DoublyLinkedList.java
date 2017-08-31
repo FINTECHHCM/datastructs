@@ -21,14 +21,6 @@ public class DoublyLinkedList<T> {
 		tail = null;
 		count = 0;
 	}
-	
-	public void show() {
-		Node n = head;
-		while(n!=null) {
-			System.out.print(n.val + " ");
-			n=n.next;
-		}
-	}
 
 	public int size() {
 		return count;
@@ -124,9 +116,9 @@ public class DoublyLinkedList<T> {
 				} else {
 					cur.prev.next = cur.next;
 					cur.next.prev = cur.prev;
+					count--;
 				}
-
-				count--;
+				
 				return true;
 			}
 

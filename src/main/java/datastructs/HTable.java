@@ -19,13 +19,13 @@ public class HTable<K, V> {
 		public V val;
 	}
 
-	private final int INIT_SIZE = 8;
+	private final int INIT_CAPACITY = 8;
 	private int _size;
 	private int _capacity;
 	private List<Pair>[] _table;
 
 	public HTable() {
-		_capacity = INIT_SIZE;
+		_capacity = INIT_CAPACITY;
 		_size = 0;
 
 		_table = (LinkedList<Pair>[]) new LinkedList[_capacity];
@@ -67,7 +67,7 @@ public class HTable<K, V> {
 				if (p.key == key) {
 					l.remove(p);
 					_size--;
-					if (_size < 0.25 * _capacity && 0.25 * _capacity > INIT_SIZE) {
+					if (_size < 0.25 * _capacity && 0.25 * _capacity > INIT_CAPACITY) {
 						resize(RESIZE.SHRINK);
 					}
 					
@@ -96,7 +96,7 @@ public class HTable<K, V> {
 	// return false if key already exists
 	private boolean insert(List<Pair>[] l, K key, V val) {
 
-		if (_size > 0.75 * _capacity) {
+		if (_size >= 0.75 * _capacity) {
 			resize(RESIZE.GROW);
 		}
 
@@ -125,7 +125,7 @@ public class HTable<K, V> {
 		@SuppressWarnings("unchecked")
 		List<Pair>[] newTable = (LinkedList<Pair>[]) new LinkedList[_capacity];
 
-		for (int i = 0; i < newTable.length; i++) {
+		for (int i = 0; i < _capacity; i++) {
 			newTable[i] = new LinkedList<Pair>();
 		}
 

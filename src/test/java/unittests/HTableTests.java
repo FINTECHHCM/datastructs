@@ -28,6 +28,9 @@ public class HTableTests {
 	public void EmptyTableReturnsZeroSize() {
 		HTable<Integer, Integer> ht = new HTable<>();
 
+		boolean res = ht.empty();
+		
+		Assert.assertTrue(res);
 		Assert.assertEquals(0, ht.size());
 	}
 
@@ -98,17 +101,4 @@ public class HTableTests {
 		Assert.assertFalse(found);
 	}
 	
-	@Test
-	public void ResizeTable() {
-		HTable<Integer, Integer> ht = new HTable<>();
-		
-		for(int i=0;i<14;i++) {
-			ht.insert(i, i);
-		}
-		
-		int size = ht.size();
-		
-		Assert.assertEquals(14, size);
-	}
-
 }
