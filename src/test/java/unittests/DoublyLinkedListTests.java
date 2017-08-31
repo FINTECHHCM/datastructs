@@ -4,9 +4,12 @@ import org.junit.Test;
 
 import datastructs.DoublyLinkedList;
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 import org.junit.Assert;
 
-public class DoublyLinkedListTests {
+public class DoublyLinkedListTests{
 	
 	@Test
 	public void ConstructorInitSize() {
@@ -254,6 +257,55 @@ public class DoublyLinkedListTests {
 		
 		Assert.assertTrue(res1);
 		Assert.assertFalse(res2);
+	}
+	
+	@Test 
+	public void IteratorOnEmptyList() {
+		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
+		
+		Iterator<Integer> itr = ll.iterator();
+		boolean res = itr.hasNext();
+		
+		Assert.assertFalse(res);
+	}
+	
+	@Test 
+	public void IteratorOnNonEmptyList() {
+		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
+		ll.addTail(0);
+		ll.addTail(1);
+		ll.addTail(2);
+		ll.addTail(3);
+		
+		Iterator<Integer> itr = ll.iterator();
+		
+		Integer j=0;
+		while(itr.hasNext()) {
+			Integer i = itr.next();
+			Assert.assertEquals(j, i);
+			j++;
+		}
+		
+		boolean res = itr.hasNext();
+		Assert.assertFalse(res);
+	}
+	
+	@Test(expected = NoSuchElementException.class)
+	public void IteratorNextThrowsExceptionOnEmptyList() {
+		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
+		
+		Iterator<Integer> itr = ll.iterator();
+		
+		Integer i = itr.next();
+	}
+	
+	@Test(expected = UnsupportedOperationException.class)
+	public void IteratorRemoveThrowsException() {
+		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
+		
+		Iterator<Integer> itr = ll.iterator();
+		
+		itr.remove();
 	}
 	
 }

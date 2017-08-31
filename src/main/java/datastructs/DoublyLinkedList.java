@@ -1,6 +1,9 @@
 package datastructs;
 
-public class DoublyLinkedList<T> {
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+public class DoublyLinkedList<T> implements Iterable<T> {
 	private class Node {
 		public T val;
 		public Node next, prev;
@@ -118,7 +121,7 @@ public class DoublyLinkedList<T> {
 					cur.next.prev = cur.prev;
 					count--;
 				}
-				
+
 				return true;
 			}
 
@@ -170,11 +173,41 @@ public class DoublyLinkedList<T> {
 		else
 			return head.val;
 	}
-	
+
 	public T getTail() {
 		if (tail == null)
 			return null;
 		else
 			return tail.val;
 	}
+
+	@Override
+	public Iterator<T> iterator() {
+		return new LinkedListIterator();
+	}
+
+	private class LinkedListIterator implements Iterator<T> {
+		private Node next;
+
+		public LinkedListIterator() {
+			next = head;
+		}
+
+		public boolean hasNext() {
+			return next != null;
+		}
+
+		public T next() {
+			if (!hasNext())
+				throw new NoSuchElementException();
+			T res = next.val;
+			next = next.next;
+			return res;
+		}
+
+		public void remove() {
+			throw new UnsupportedOperationException();
+		}
+	}
+
 }
