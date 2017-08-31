@@ -117,7 +117,7 @@ public class DoublyLinkedList<T> {
 					cur.prev.next = cur.next;
 					cur.next.prev = cur.prev;
 				}
-				
+
 				count--;
 				return true;
 			}
@@ -162,5 +162,19 @@ public class DoublyLinkedList<T> {
 
 		count--;
 		return oldTail.val;
+	}
+
+	public T getHead() {
+		if (head == null)
+			return null;
+		else
+			return head.val;
+	}
+	
+	public T getTail() {
+		if (tail == null)
+			return null;
+		else
+			return tail.val;
 	}
 }
