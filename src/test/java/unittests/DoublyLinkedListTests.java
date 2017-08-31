@@ -80,7 +80,9 @@ public class DoublyLinkedListTests {
 		
 		boolean res = ll.remove(44);
 		int size = ll.size();
+		int head = ll.getHead();
 		
+		Assert.assertEquals(5, head);
 		Assert.assertEquals(3, size);
 		Assert.assertTrue(res);
 	}
@@ -122,7 +124,9 @@ public class DoublyLinkedListTests {
 		ll.addTail(5);
 		
 		int idx = ll.indexOf(100);
+		int tail = ll.getTail();
 		
+		Assert.assertEquals(5, tail);
 		Assert.assertEquals(-1, idx);
 	}
 	

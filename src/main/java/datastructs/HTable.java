@@ -67,6 +67,10 @@ public class HTable<K, V> {
 				if (p.key == key) {
 					l.remove(p);
 					_size--;
+					if (_size < 0.25 * _capacity && 0.25 * _capacity > INIT_SIZE) {
+						resize(RESIZE.SHRINK);
+					}
+					
 					return true;
 				}
 			}
@@ -92,23 +96,19 @@ public class HTable<K, V> {
 	// return false if key already exists
 	private boolean insert(List<Pair>[] l, K key, V val) {
 
-		if (_size > INIT_SIZE && _size > 0.75 * _capacity) {
+		if (_size > 0.75 * _capacity) {
 			resize(RESIZE.GROW);
-		}
-
-		if (_size > INIT_SIZE && _size < 0.25 * _capacity) {
-			resize(RESIZE.SHRINK);
 		}
 
 		int hashCode = getHashCode(key);
 		
-		LinkedList<Pair> ll = (LinkedList<Pair>) _table[hashCode];
+		LinkedList<Pair> ll = (LinkedList<Pair>) l[hashCode];
 		for(Pair p : ll) {
 			if(p.key == key)
 				return false;
 		}
 		
-		_table[hashCode].add(new Pair(key, val));
+		l[hashCode].add(new Pair(key, val));
 
 		_size++;
 		return true;

@@ -97,5 +97,18 @@ public class HTableTests {
 		Assert.assertTrue(res);
 		Assert.assertFalse(found);
 	}
+	
+	@Test
+	public void ResizeTable() {
+		HTable<Integer, Integer> ht = new HTable<>();
+		
+		for(int i=0;i<14;i++) {
+			ht.insert(i, i);
+		}
+		
+		int size = ht.size();
+		
+		Assert.assertEquals(14, size);
+	}
 
 }
