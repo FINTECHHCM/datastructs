@@ -1,9 +1,10 @@
-package hashtabletests;
+package unittests;
 
 import org.junit.Test;
-import org.junit.Assert;
 
-import hashtable.HTable;
+import datastructs.HTable;
+
+import org.junit.Assert;
 
 public class HTableTests {
 

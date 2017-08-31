@@ -1,7 +1,9 @@
-package doublylinkedlisttests;
+package unittests;
 
-import doublylinkedlist.DoublyLinkedList;
 import org.junit.Test;
+
+import datastructs.DoublyLinkedList;
+
 import org.junit.Assert;
 
 public class DoublyLinkedListTests {
