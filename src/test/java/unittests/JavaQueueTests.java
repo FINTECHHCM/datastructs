@@ -8,7 +8,7 @@ import org.junit.Assert;
 public class JavaQueueTests {
 
 	@Test
-	public void ConstructorInitsQueue() {
+	public void constructorInitsQueue() {
 		JavaQueue<Integer> q = new JavaQueue<>();
 
 		int size = q.size();
@@ -17,7 +17,7 @@ public class JavaQueueTests {
 	}
 	
 	@Test
-	public void EmptyQueueIsTrue() {
+	public void emptyQueueIsTrue() {
 		JavaQueue<Integer> q = new JavaQueue<>();
 
 		boolean res = q.empty();
@@ -26,7 +26,7 @@ public class JavaQueueTests {
 	}
 	
 	@Test
-	public void NonEmptyQueueIsFalse() {
+	public void nonEmptyQueueIsFalse() {
 		JavaQueue<Integer> q = new JavaQueue<>();
 		q.enqueue(35);
 		
@@ -36,7 +36,7 @@ public class JavaQueueTests {
 	}
 	
 	@Test
-	public void QueueEmtpyAfterDequeueingAll() {
+	public void queueEmtpyAfterDequeueingAll() {
 		JavaQueue<Integer> q = new JavaQueue<>();
 		
 		q.enqueue(35);
@@ -52,7 +52,7 @@ public class JavaQueueTests {
 	}
 
 	@Test
-	public void Enqueue() {
+	public void enqueue() {
 		JavaQueue<Integer> q = new JavaQueue<>();
 		
 		q.enqueue(3);
@@ -68,7 +68,7 @@ public class JavaQueueTests {
 	}
 	
 	@Test
-	public void DequeueEmptyIsNull() {
+	public void dequeueEmptyIsNull() {
 		JavaQueue<Integer> q = new JavaQueue<>();
 		
 		Integer end = q.dequeue();
@@ -77,7 +77,7 @@ public class JavaQueueTests {
 	}
 	
 	@Test
-	public void PeekEmptyIsNull() {
+	public void peekEmptyIsNull() {
 		JavaQueue<Integer> q = new JavaQueue<>();
 		
 		Integer end = q.peek();

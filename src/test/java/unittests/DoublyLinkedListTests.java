@@ -12,7 +12,7 @@ import org.junit.Assert;
 public class DoublyLinkedListTests{
 	
 	@Test
-	public void ConstructorInitSize() {
+	public void constructorInitSize() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		
 		int size = ll.size();
@@ -23,7 +23,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test
-	public void SizeGetsCount() {
+	public void sizeGetsCount() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		ll.addHead(2);
 		ll.addHead(4);
@@ -37,7 +37,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void RemoveFromEmptyList() {
+	public void removeFromEmptyList() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 				
 		Integer head = ll.removeHead();
@@ -46,7 +46,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void RemoveValueFromEmptyList() {
+	public void removeValueFromEmptyList() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 				
 		boolean res = ll.remove(3);
@@ -55,7 +55,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void RemoveValueFromLsitOfSizeOne() {
+	public void removeValueFromLsitOfSizeOne() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		
 		ll.addHead(3);
@@ -67,7 +67,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void RemoveHeadFromListOfSizeOne() {
+	public void removeHeadFromListOfSizeOne() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 				
 		ll.addHead(3);
@@ -79,7 +79,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void RemoveTailFromListOfSizeOne() {
+	public void removeTailFromListOfSizeOne() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 				
 		ll.addHead(3);
@@ -91,7 +91,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void RemoveHead() {
+	public void removeHead() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		ll.addHead(2);
 		ll.addHead(4);
@@ -106,7 +106,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void RemoveTail() {
+	public void removeTail() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		ll.addHead(2);
 		ll.addHead(4);
@@ -119,7 +119,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void RemoveExistingElement() {
+	public void removeExistingElement() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		ll.addHead(2);
 		ll.addHead(4);
@@ -136,7 +136,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void RemoveExistingElementFromHead() {
+	public void removeExistingElementFromHead() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		ll.addHead(2);
 		ll.addHead(4);
@@ -153,7 +153,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void RemoveExistingElementFromTail() {
+	public void removeExistingElementFromTail() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		ll.addHead(2);
 		ll.addHead(4);
@@ -170,7 +170,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void RemoveNonExistingElement() {
+	public void removeNonExistingElement() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		ll.addHead(2);
 		ll.addHead(4);
@@ -185,7 +185,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void AddTail() {
+	public void addTail() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		ll.addTail(2);
 		ll.addTail(4);
@@ -208,7 +208,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void IndexOfExistingValue() {
+	public void indexOfExistingValue() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		ll.addTail(2);
 		ll.addTail(4);
@@ -221,7 +221,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void IndexOfMissingValue() {
+	public void indexOfMissingValue() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		ll.addTail(2);
 		ll.addTail(4);
@@ -236,7 +236,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void EmptyListContains() {
+	public void emptyListContains() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		
 		boolean res = ll.contains(100);
@@ -245,7 +245,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void Contains() {
+	public void contains() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		ll.addTail(2);
 		ll.addTail(4);
@@ -260,7 +260,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void IteratorOnEmptyList() {
+	public void iteratorOnEmptyList() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		
 		Iterator<Integer> itr = ll.iterator();
@@ -270,7 +270,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test 
-	public void IteratorOnNonEmptyList() {
+	public void iteratorOnNonEmptyList() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		ll.addTail(0);
 		ll.addTail(1);
@@ -291,7 +291,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test(expected = NoSuchElementException.class)
-	public void IteratorNextThrowsExceptionOnEmptyList() {
+	public void iteratorNextThrowsExceptionOnEmptyList() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		
 		Iterator<Integer> itr = ll.iterator();
@@ -300,7 +300,7 @@ public class DoublyLinkedListTests{
 	}
 	
 	@Test(expected = UnsupportedOperationException.class)
-	public void IteratorRemoveThrowsException() {
+	public void iteratorRemoveThrowsException() {
 		DoublyLinkedList<Integer> ll = new DoublyLinkedList<>();
 		
 		Iterator<Integer> itr = ll.iterator();

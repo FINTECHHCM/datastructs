@@ -9,7 +9,7 @@ import org.junit.Assert;
 public class HTableTests {
 
 	@Test
-	public void Constructor() {
+	public void constructor() {
 		HTable<Integer, Integer> ht = new HTable<>();
 
 		int size = ht.size();
@@ -18,14 +18,14 @@ public class HTableTests {
 	}
 
 	@Test
-	public void EmptyTableReturnsTrue() {
+	public void emptyTableReturnsTrue() {
 		HTable<Integer, Integer> ht = new HTable<>();
 
 		Assert.assertTrue(ht.empty());
 	}
 
 	@Test
-	public void EmptyTableReturnsZeroSize() {
+	public void emptyTableReturnsZeroSize() {
 		HTable<Integer, Integer> ht = new HTable<>();
 
 		boolean res = ht.empty();
@@ -35,7 +35,7 @@ public class HTableTests {
 	}
 
 	@Test
-	public void InsertNewReturnsTrue() {
+	public void insertNewReturnsTrue() {
 		HTable<Integer, Character> ht = new HTable<>();
 
 		boolean res = ht.insert(12, 'c');
@@ -43,7 +43,7 @@ public class HTableTests {
 	}
 
 	@Test
-	public void ContainsFindsKey() {
+	public void containsFindsKey() {
 		HTable<Integer, Character> ht = new HTable<>();
 
 		ht.insert(12, 'c');
@@ -53,7 +53,7 @@ public class HTableTests {
 	}
 
 	@Test
-	public void GetReturnsNullOnNoMatch() {
+	public void getReturnsNullOnNoMatch() {
 		HTable<Integer, Character> ht = new HTable<>();
 
 		ht.insert(12, 'c');
@@ -66,7 +66,7 @@ public class HTableTests {
 	}
 
 	@Test
-	public void GetReturnsValue() {
+	public void getReturnsValue() {
 		HTable<Integer, Character> ht = new HTable<>();
 
 		ht.insert(12, 'c');
@@ -76,7 +76,7 @@ public class HTableTests {
 	}
 
 	@Test
-	public void InsertReturnsFalseOnDuplicates() {
+	public void insertReturnsFalseOnDuplicates() {
 		HTable<Integer, Character> ht = new HTable<>();
 
 		ht.insert(12, 'c');
@@ -86,7 +86,7 @@ public class HTableTests {
 	}
 
 	@Test
-	public void RemoveDeletesKVPair() {
+	public void removeDeletesKVPair() {
 		HTable<Integer, Character> ht = new HTable<>();
 
 		ht.insert(12, 'c');
