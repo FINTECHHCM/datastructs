@@ -7,7 +7,7 @@ import org.junit.Assert;
 
 import javax.naming.OperationNotSupportedException;
 
-public class JavaStackTests {
+public class JavaStackTest {
 
 	@Test
 	public void constructorInitSize() {

@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import datastructs.LRUCache;
 
-public class LRUCacheTests {
+public class LRUCacheTest {
 
 	@Test
 	public void InitSizes() {

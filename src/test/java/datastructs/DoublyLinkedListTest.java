@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
 
 import org.junit.Assert;
 
-public class DoublyLinkedListTests{
+public class DoublyLinkedListTest{
 	
 	@Test
 	public void constructorInitSize() {

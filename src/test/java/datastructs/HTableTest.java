@@ -1,12 +1,11 @@
 package datastructs;
-
+import datastructs.HTable;
 import org.junit.Test;
 
-import datastructs.HTable;
 
 import org.junit.Assert;
 
-public class HTableTests {
+public class HTableTest {
 
 	@Test
 	public void constructor() {

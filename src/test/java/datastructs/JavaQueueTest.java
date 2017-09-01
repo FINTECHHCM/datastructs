@@ -5,7 +5,7 @@ import datastructs.JavaQueue;
 import org.junit.Test;
 import org.junit.Assert;
 
-public class JavaQueueTests {
+public class JavaQueueTest {
 
 	@Test
 	public void constructorInitsQueue() {
@@ -48,7 +48,7 @@ public class JavaQueueTests {
 		
 		boolean res = q.empty();
 
-		Assert.assertFalse(res); // true
+		Assert.assertTrue(res); 
 	}
 
 	@Test
