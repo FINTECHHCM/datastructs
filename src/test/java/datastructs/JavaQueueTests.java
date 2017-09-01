@@ -1,4 +1,4 @@
-package unittests;
+package datastructs;
 
 import datastructs.JavaQueue;
 
@@ -48,7 +48,7 @@ public class JavaQueueTests {
 		
 		boolean res = q.empty();
 
-		Assert.assertTrue(res);
+		Assert.assertFalse(res); // true
 	}
 
 	@Test

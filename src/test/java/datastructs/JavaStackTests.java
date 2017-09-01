@@ -1,4 +1,4 @@
-package unittests;
+package datastructs;
 
 import datastructs.JavaStack;
 

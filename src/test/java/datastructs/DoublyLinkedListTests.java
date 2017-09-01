@@ -1,4 +1,4 @@
-package unittests;
+package datastructs;
 
 import org.junit.Test;
 
@@ -296,6 +296,7 @@ public class DoublyLinkedListTests{
 		
 		Iterator<Integer> itr = ll.iterator();
 		
+		@SuppressWarnings("unused")
 		Integer i = itr.next();
 	}
 	

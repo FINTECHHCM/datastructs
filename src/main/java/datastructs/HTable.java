@@ -24,6 +24,7 @@ public class HTable<K, V> {
 	private int _capacity;
 	private List<Pair>[] _table;
 
+	@SuppressWarnings("unchecked")
 	public HTable() {
 		_capacity = INIT_CAPACITY;
 		_size = 0;

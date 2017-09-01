@@ -1,4 +1,4 @@
-package unittests;
+package datastructs;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

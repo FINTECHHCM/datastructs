@@ -1,4 +1,4 @@
-package unittests;
+package datastructs;
 
 import org.junit.Test;
 
