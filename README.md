@@ -9,3 +9,4 @@ All data structures are implemented in Java using generics:
  * Queue
  * Stack
  * LRU Cache
+ * Heap
