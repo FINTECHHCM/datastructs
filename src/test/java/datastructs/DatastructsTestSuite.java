@@ -6,7 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ DoublyLinkedListTest.class, HTableTest.class, JavaQueueTest.class, 
-	JavaStackTest.class, LRUCacheTest.class})
-public class AllTests {
+	JavaStackTest.class, LRUCacheTest.class, HeapTest.class, TrieTest.class})
+public class DatastructsTestSuite {
 
 }
